@@ -1,0 +1,29 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <!--
+    Nanoservices are consumed as compiled DLLs (built by build-libs.sh into ./lib), never as
+    project references. None of them has NuGet dependencies, so no PackageReferences are needed.
+  -->
+  <ItemGroup>
+    <Reference Include="ValidateRequest">
+      <HintPath>lib\ValidateRequest.dll</HintPath>
+    </Reference>
+    <Reference Include="TraverseDirectory">
+      <HintPath>lib\TraverseDirectory.dll</HintPath>
+    </Reference>
+    <Reference Include="SplitPathsIntoChunks">
+      <HintPath>lib\SplitPathsIntoChunks.dll</HintPath>
+    </Reference>
+    <Reference Include="PatternMatching">
+      <HintPath>lib\PatternMatching.dll</HintPath>
+    </Reference>
+    <Reference Include="SearchContent">
+      <HintPath>lib\SearchContent.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+</Project>
